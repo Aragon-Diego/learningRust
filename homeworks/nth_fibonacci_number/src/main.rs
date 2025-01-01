@@ -7,11 +7,14 @@ fn main() {
         .read_line(&mut nth)
         .expect("Failed to read line");
     let nth:i32 = nth.trim().parse().expect("Escribe un número válido");
+    if nth <= 0 {
+        panic!("Escribe un número válido");
+    }
     let mut step = 0;
     let mut last = 0;
     let mut current = 0;
     let mut first = true;
-    println!("<----- Secuencia ----->");
+    println!("<----- Secuenciad ----->");
     while step <= nth {
         if first && last == 1 {
             last = 0;
